@@ -18,6 +18,8 @@ public function deleteContact($id){
     $this->db->execute("DELETE FROM contacts WHERE id =$id");
 }
 
+
+
 }
 
 ?>
