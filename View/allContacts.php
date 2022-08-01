@@ -1,3 +1,5 @@
+
+
 <?php
 require("../Model/service.php");
 
@@ -5,7 +7,6 @@ $service = new Service();
 
 $contats = $service->allContacts();
 
-print_r($contats);
 
 ?>
 

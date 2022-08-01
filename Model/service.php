@@ -23,8 +23,12 @@ public function updateContact($id, $name , $telefone){
     $this->db->execute("UPDATE contacts SET name ='$name', telefone ='$telefone' WHERE id = $id");
 }
 
+
+
 public function allContacts(){
     $results = $this->db->execute("SELECT id, name , telefone FROM contacts");
+    print_r($results);
+
     $list = [];
         foreach($results as $r){
             $list[] = new Entity($r);
@@ -32,14 +36,6 @@ public function allContacts(){
         return $list;
 }
 
-public function teste(){
-    $results = $this->db->execute("SELECT id, name , telefone FROM contacts");
-    $list = [];
-    foreach($results as $r){
-        $list[] = new Entity($r);
-    }
-    return $list;
-}
 
 }
 

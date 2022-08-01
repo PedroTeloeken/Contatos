@@ -13,13 +13,14 @@ private function close(){
 public function execute($sql){
     $this->connect();
     $resultObject = $this->conn->query($sql);
+
     
     if(!($resultObject instanceof mysqli_result)) return;
-    
+
     $resultArr = [];
     
     while($r = mysqli_fetch_assoc($resultObject)){
-        $resultAr[] = $r;
+        $resultArr[] = $r;
     }
     $this->close();
     return $resultArr;
