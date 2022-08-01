@@ -12,7 +12,6 @@ Class Entity{
         $this->name = $r["name"];
         $this->email = $r["telefone"];
     }
-
 }
 
 ?>
